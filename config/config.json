@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "ethan",
+    "password": "password",
+    "database": "socialnetwork",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "ethan",
+    "password": "password",
+    "database": "socialnetwork",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "ethan",
+    "password": "password",
+    "database": "socialnetwork",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

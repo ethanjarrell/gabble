@@ -1,0 +1,29 @@
+{
+  "name": "week-6-project-gabble",
+  "version": "1.0.0",
+  "description": "This is a social network for students.  This network, called \"Gabble\", has users, public messages and likes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanjarrell/gabble.git"
+  },
+  "author": "Ethan Jarrell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethanjarrell/gabble/issues"
+  },
+  "homepage": "https://github.com/ethanjarrell/gabble#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.0",
+    "jsonfile": "^3.0.0",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.5",
+    "pg": "^6.4.0",
+    "sequelize": "^4.2.1"
+  }
+}
