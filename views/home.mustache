@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Create a gab</title>
+  <link rel="stylesheet" href="homestyles.css">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One|Luckiest+Guy|Pacifico|Shrikhand" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar">
+    <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span>logged in as</span><span><a href="/logout">log out</a></span>
+  </div>
+
+
+  <div class="bodywrapper">
+  <h3 class="displayname"></h3>
+  <h1 class="h1">Recent Gabs</h1>
+
+
+    <ul>
+      {{#posts}}
+        <label for="">Title</label>
+        <li>{{title}}</li>
+        <label for="">Post</label>
+        <li>{{body}}</li>
+      {{/posts}}
+    </ul>
+
+</div>
+</body>
+
+</html>

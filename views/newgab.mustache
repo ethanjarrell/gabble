@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create a gab</title>
+    <link rel="stylesheet" href="newgabstyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One|Luckiest+Guy|Pacifico|Shrikhand" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar">
+      <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span>logged in as</span><span><a href="/logout">log out</a></span>
+    </div>
+    <div class="bodywrapper">
+    <form action="/newgab" method="post">
+      <h1 class="h1">Create a new gab</h1>
+      <fieldset>
+        <div class="labelwrap">
+        <input class="gabtitle" type="text" name="gabtitle" placeholder="Gab Title">
+        <textarea class="gabbody" type="text" name="gabbody" placeholder="Write your gab here"></textarea>
+        </div>
+        <div class="form__submit-button">
+          <input type="submit">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  </body>
+</html>

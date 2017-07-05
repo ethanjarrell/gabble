@@ -1,0 +1,97 @@
+* {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, .57);
+transition-duration: .1s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.bodywrapper {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: row nowrap;
+}
+
+.navbar {
+  margin-top: 5vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  font-family: 'Luckiest Guy', cursive;
+  color: darkgray;
+}
+
+span {
+  padding-top: 8px;
+  margin: 8px 10px 5px 10px;
+}
+
+span:hover {
+  margin: 0vw 2vw 0vw 0vw;
+  color: black;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+h1 {
+  margin-left: 2vw;
+  font-family: 'Pacifico', cursive;
+}
+
+.labelwrap {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.gabtitle {
+  font-family: sans-serif;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.gabbody {
+  font-family: sans-serif;
+  outline: none;
+  height: 300px;
+}
+
+fieldset {
+  border-style: none;
+}
+
+.form__submit-button {
+  margin-top: 10px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+}
+
+.form__submit-button input{
+  font-size: 20px;
+  background-color: none;
+  border-style: none;
+  color: gray;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.form__submit-button input:hover {
+  color: black;
+  font-size: 25px;
+  cursor: pointer;
+}

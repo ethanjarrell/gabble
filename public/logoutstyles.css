@@ -1,0 +1,19 @@
+* {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, .57);
+transition-duration: .1s;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+h1 {
+  font-size: 30vw;
+  margin-left: 2vw;
+  font-family: 'Pacifico', cursive;
+}

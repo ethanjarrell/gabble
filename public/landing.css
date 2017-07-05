@@ -1,77 +1,21 @@
 * {
-  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, .57);
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
 transition-duration: 1s;
 }
 
 body {
-  max-height: 100vh;
+  font-family: sans-serif;
   max-width: 100vw;
+  min-height: 100vh;
 }
 
 .bodywrapper {
+  margin-top: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-flow: row nowrap;
-}
-
-.labelwrap2 {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-form {
-  display: flex;
   flex-flow: column nowrap;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
-  margin-right: 15px;
-  border-style: none;
-}
-
-fieldset {
-  border-style: none;
-}
-
-h1 {
-  font-family: 'Pacifico', cursive;
-}
-
-label {
-  margin-left: 5px;
-  margin-right: 5px;
-  font-family: 'Pacifico', cursive;
-}
-
-input {
-  width: 150px;
-  height: 35px;
-  margin-bottom: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
-  outline: none;
-}
-
-.form__submit-button input{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  font-size: 20px;
-  color: gray;
-  font-family: 'Luckiest Guy', cursive;
-}
-
-.form__submit-button input:hover {
-  color: black;
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.labelwrap {
-  display: flex;
-  flex-flow: column wrap;
 }
 
 .headerwrapper {
@@ -80,11 +24,11 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 .gabble {
-  font-size: 35px;
+  font-size: 60px;
   color: darkgray;
   font-family: 'Luckiest Guy', cursive;
 }
@@ -102,20 +46,17 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 8px;
+  font-size: 10px;
   margin-right: 16px;
   border-right-color: black;
   border-right-style: dashed;
   border-right-width: 2px;
-  border-bottom-color: black;
-  border-bottom-style: dashed;
-  border-bottom-width: 2px;
-  padding-right: 15px;
+  padding-right: 30px;
 }
 
 .signup h2 a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   color: black;
   color: darkgray;
   font-family: 'Luckiest Guy', cursive;
@@ -123,7 +64,7 @@ input {
 
 .login h2 a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   color: black;
   color: darkgray;
   font-family: 'Luckiest Guy', cursive;
@@ -131,14 +72,14 @@ input {
 
 .signup h2 a:hover {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 35px;
   color: black;
   font-family: 'Luckiest Guy', cursive;
 }
 
 .login h2 a:hover {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 35px;
   color: black;
   font-family: 'Luckiest Guy', cursive;
 }
@@ -148,6 +89,6 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 8px;
+  font-size: 10px;
   margin-left: 16px;
 }
