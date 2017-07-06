@@ -8,6 +8,36 @@ a {
   color: inherit;
 }
 
+h3 {
+  padding-right: 5vw;
+  font-family: 'Pacifico', cursive;
+}
+
+.postsdiv {
+  height: 75vh;
+  width: 300px;
+}
+
+.posttitle {
+  font-weight: bold;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: black;
+}
+
+.postbody {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: darkgray;
+  margin-bottom: 15px;
+}
+
+h4 {
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
 body {
   display: flex;
   flex-flow: row nowrap;
@@ -42,12 +72,14 @@ label {
 }
 
 ul {
+  margin-right: 20vw;
   width: 30vw;
   display: flex;
   flex-flow: column wrap;
 }
 
 li {
+  min-width: 200px;
   display: flex;
   flex-flow: row wrap;
   color: darkgray;
@@ -59,6 +91,8 @@ span {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
+  align-self: flex-end;
+  text-align: right;
   padding-top: 8px;
   margin: 8px 10px 5px 10px;
 }
@@ -71,6 +105,7 @@ span:hover {
 }
 
 h1 {
+  margin-top: -3vh;
   display: flex;
   margin-left: 2vw;
   align-self: flex-start;

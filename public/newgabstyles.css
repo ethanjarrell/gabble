@@ -8,9 +8,14 @@ a {
   color: inherit;
 }
 
+h3 {
+  padding-right: 5vw;
+  font-family: 'Pacifico', cursive;
+}
+
 body {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   max-height: 100vh;
@@ -36,6 +41,7 @@ body {
 }
 
 span {
+  text-align: right;
   padding-top: 8px;
   margin: 8px 10px 5px 10px;
 }
@@ -48,6 +54,9 @@ span:hover {
 }
 
 h1 {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: -3vw;
   margin-left: 2vw;
   font-family: 'Pacifico', cursive;
 }

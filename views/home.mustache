@@ -10,24 +10,26 @@
 
 <body>
   <div class="navbar">
-    <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span>logged in as</span><span><a href="/logout">log out</a></span>
+    <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span>logged in as {{#name}}{{.}}{{/name}}</span><span><a href="/logout">log out</a></span>
   </div>
 
 
   <div class="bodywrapper">
-  <h3 class="displayname"></h3>
-  <h1 class="h1">Recent Gabs</h1>
 
 
     <ul>
+      <div>
+      <h3>Welcome, {{#name}}{{.}}{{/name}}</h3>
+      <h1 class="h1">Recent Gabs</h1>
+    </div >
+    <div class="postsdiv" style="overflow:auto;">
+
       {{#posts}}
-        <label for="">Title</label>
-        <li>{{title}}</li>
-        <label for="">Post</label>
-        <li>{{body}}</li>
+        <li class="posttitle">{{title}}</li>
+        <li class="postbody">{{body}}</li>
       {{/posts}}
     </ul>
-
+  </div>
 </div>
 </body>
 

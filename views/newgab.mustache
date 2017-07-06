@@ -8,10 +8,14 @@
   </head>
   <body>
     <div class="navbar">
-      <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span>logged in as</span><span><a href="/logout">log out</a></span>
+      <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span>logged in as {{#name}}{{.}}{{/name}}</span><span><a href="/logout">log out</a></span>
     </div>
     <div class="bodywrapper">
     <form action="/newgab" method="post">
+      <div>
+      <h3>Welcome, {{#name}}{{.}}{{/name}}</h3>
+
+    </div>
       <h1 class="h1">Create a new gab</h1>
       <fieldset>
         <div class="labelwrap">

@@ -22,16 +22,6 @@ app.use(session({
   saveUninitialized: true
 }));
 
-// const user = models.user.build({
-//   name: 'Ethan Jarrell',
-//   email: 'ethan.jarrel@gmail.com',
-//   username: 'ejarrell',
-//   password: 'password'
-// })
-//
-// user.save().then(function(user) {
-//   console.log(user);
-// })
 
 app.get('/', function(req, res) {
   res.render('index')
@@ -45,14 +35,6 @@ app.get('/login', function (req, res) {
   res.render('login');
 });
 
-// app.get('/home', function (req, res) {
-//   res.render('home');
-// });
-
-app.get('/newgab', function (req, res) {
-  res.render('newgab');
-});
-
 app.get('/logout', function (req, res) {
   res.render('index');
 });
@@ -61,15 +43,23 @@ app.get('/login', function(req, res) {
   if (req.session && req.session.authenticated) {
     var user = models.user.findOne({
       where: {
-        username: req.session.username
+        username: req.session.username,
+        password: req.session.password
       }
-    }).then(function(currentUser) {
-      res.render('index', {user: currentUser});
+    }).then(function(user) {
+      if(user){
+        req.session.username = req.body.username;
+        req.session.userid = user.dataValues.id;
+        let username = req.session.username;
+        let userid = req.session.userid;
+        res.render('index', {user: user});
+      }
     })
   } else {
     res.redirect('/home')
   }
 })
+
 
 app.post('/login', function(req, res) {
   let username = req.body.username;
@@ -84,6 +74,8 @@ app.post('/login', function(req, res) {
     if (user.password == password) {
       req.session.username = username;
       req.session.authenticated = true;
+      console.log(req.session);
+
       res.redirect('/home');
     } else {
       res.redirect('/login');
@@ -102,19 +94,13 @@ app.post('/signup', function(req, res) {
 
   user.save().then(function(user) {
     req.username = user.username;
-    req.authenticated = true;
+    req.session.authenticated = true;
     res.redirect('/login')
     console.log(req.session);
   })
 
 
 })
-
-// app.get('/', function(req, res) {
-//   models.user.findAll().then(function(user) {
-//     res.render('index', {users: users})
-//   })
-// })
 
 app.post('/signup', function(req, res) {
   const newUser = models.user.build({
@@ -141,14 +127,15 @@ post.save().then(function(post) {
 
 app.get('/home', function(req, res) {
   models.post.findAll().then(function(posts) {
-    res.render('home', {posts: posts})
+    res.render('home', {posts: posts, name: req.session.username})
   })
 })
 
-// app.get('/home', function(req, res) {
-//   userid = models.user.id
-//   username = req.body.username
-
+app.get('/newgab', function(req, res) {
+  models.post.findAll().then(function(posts) {
+    res.render('newgab', {posts: posts, name: req.session.username})
+  })
+})
 
 app.post('/home', function(req,res) {
   const post = models.post.build({
