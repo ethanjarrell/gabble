@@ -10,7 +10,7 @@
 
 <body>
   <div class="navbar">
-    <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span>logged in as {{#name}}{{.}}{{/name}}</span><span><a href="/logout">log out</a></span>
+    <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span><a href="./liked">Likes</a></span><span>logged in as {{#name}}{{.}}{{/name}}</span><span><a href="/logout">log out</a></span>
   </div>
 
 
@@ -19,18 +19,34 @@
 
     <ul>
       <div>
-      <h3>Welcome, {{#name}}{{.}}{{/name}}</h3>
-      <h1 class="h1">Recent Gabs</h1>
-    </div >
-    <div class="postsdiv" style="overflow:auto;">
+        <h3>Welcome, {{#name}}{{.}}{{/name}}</h3>
+        <h1 class="h1">Recent Gabs</h1>
+      </div>
+      <div class="postsdiv" style="overflow:auto;">
 
-      {{#posts}}
-        <li class="posttitle">{{title}}</li>
-        <li class="postbody">{{body}}</li>
-      {{/posts}}
-    </ul>
+        {{#posts}}
+          <div class="postwrapper">
+            <div>
+          
+              <li class="name">{{user.name}}</li>
+
+              <li class="posttitle">{{title}}
+                <div>{{createdAt}}</div>
+              </li>
+              <li class="postbody">{{body}}</li>
+            </div>
+            <form class="" action="/like" method="post">
+              <label>like post: </label><input class="submitbtn" type="submit" name="submitbtn" value="{{id}}">
+              <label>Delete post: </label><input class="submitbtn" type="submit" name="submitbtn" value="{{id}}">
+            </form>
+          </div>
+        {{/posts}}
+
+      </div>
+
   </div>
-</div>
+  </ul>
+  </div>
 </body>
 
 </html>

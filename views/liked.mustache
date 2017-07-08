@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Create a gab</title>
-  </head>
-  <body>
-    <div class="navbar">
-      <span>home</span><span>new gab</span><span>logged in as</span><span>log out</span>
-    </div>
-    
 
-    </form>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>Create a gab</title>
+  <link rel="stylesheet" href="likedstyles.css">
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One|Luckiest+Guy|Pacifico|Shrikhand" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar">
+    <span><a href="./home">home</a></span><span><a href="./newgab">new gab</a></span><span><a href="./liked">Likes</a></span><span>logged in as {{#name}}{{.}}{{/name}}</span><span><a href="/logout">log out</a></span>
+  </div>
+
+  <div class="bodywrapper">
+    <h3>How do you like me now?</h3>
+    <ul>
+      {{#likes}}
+        <li class="posted">post{{postId}}</li>
+        <li class="liked">was liked by{{user.name}}</li>
+      {{/likes}}
+    </ul>
+  </div>
+
+
+  </form>
+</body>
+
 </html>

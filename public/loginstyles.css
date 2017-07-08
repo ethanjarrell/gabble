@@ -1,6 +1,6 @@
 * {
   transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
-transition-duration: 1s;
+  transition-duration: 1s;
 }
 
 body {
@@ -42,7 +42,7 @@ input {
   outline: none;
 }
 
-.form__submit-button input{
+.form__submit-button input {
   display: flex;
   justify-content: center;
   align-items: center;

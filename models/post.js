@@ -5,9 +5,9 @@ module.exports = function(sequelize, DataTypes) {
     body: DataTypes.STRING
   }, {});
 
-// post.associate = function(models) {
-//   post.belongsTo(models.user,{as : 'user', foreignKey: 'postId'})
-// }
+post.associate = function(models) {
+  post.belongsTo(models.user,{as : 'user', foreignKey: 'userId'})
+}
 
   return post;
 };

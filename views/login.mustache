@@ -9,39 +9,39 @@
 </head>
 
 <body>
-<div class="bodywrapper">
+  <div class="bodywrapper">
 
-  <div class="welcome">
-  <section class="headerwrapper">
-    <div>Welcome to</div>
-    <div class="gabble">Gabble</div>
-  </section>
-  <section class="buttonwrapper">
-    <div class="signup">
-      <h1>Not a member?</h1>
-      <h2><a href="/signup">sign up</a></h2>
+    <div class="welcome">
+      <section class="headerwrapper">
+        <div>Welcome to</div>
+        <div class="gabble">Gabble</div>
+      </section>
+      <section class="buttonwrapper">
+        <div class="signup">
+          <h1>Not a member?</h1>
+          <h2><a href="/signup">sign up</a></h2>
+        </div>
+        <div class="login">
+          <h1>Already a member?</h1>
+          <h2><a href="/login">log in</a></h2>
+        </div>
+      </section>
     </div>
-    <div class="login">
-      <h1>Already a member?</h1>
-      <h2><a href="/login">log in</a></h2>
-    </div>
-  </section>
+
+    <form action="/login" method="post">
+      <h1>Log in</h1>
+      <fieldset>
+        <label for="username">Username</label>
+        <input autocomplete="off" type="text" name="username" placeholder="username">
+        <label for="password">Password</label>
+        <input autocomplete="off" type="password" name="password" placeholder="password">
+        <div class="form__submit-button">
+          <input type="submit">
+        </div>
+      </fieldset>
+    </form>
+
   </div>
-
-  <form action="/login" method="post">
-    <h1>Log in</h1>
-    <fieldset>
-      <label for="username">Username</label>
-      <input autocomplete="off" type="text" name="username" placeholder="username">
-      <label for="password">Password</label>
-      <input autocomplete="off" type="password" name="password" placeholder="password">
-      <div class="form__submit-button">
-        <input type="submit">
-      </div>
-    </fieldset>
-  </form>
-
-</div>
 </body>
 
 </html>

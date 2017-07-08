@@ -1,0 +1,94 @@
+* {
+  transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, .57);
+  transition-duration: .1s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-height: 100vh;
+  max-width: 90vw;
+}
+
+.posted {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.liked {
+  font-family: sans-serif;
+  color: darkgray;
+  margin-bottom: 10px;
+}
+
+.bodywrapper {
+  margin-left: 30px;
+  margin-top: 5px;
+  margin-right: 50px;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: column nowrap;
+}
+
+.navbar {
+  margin-left: 20px;
+  margin-top: 15vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  font-family: 'Luckiest Guy', cursive;
+  color: darkgray;
+}
+
+span {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-self: flex-end;
+  text-align: right;
+  padding-top: 8px;
+  margin: 8px 10px 5px 10px;
+}
+
+span:hover {
+  margin: 0vw 2vw 0vw 0vw;
+  color: black;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+h3 {
+  padding-right: 5vw;
+  font-family: 'Pacifico', cursive;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 200px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+li {
+  min-width: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  color: darkgray;
+  font-family: sans-serif;
+  list-style: none;
+}

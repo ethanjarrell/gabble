@@ -1,6 +1,6 @@
 * {
   transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, .57);
-transition-duration: .1s;
+  transition-duration: .1s;
 }
 
 a {
@@ -91,7 +91,7 @@ fieldset {
   border-style: none;
 }
 
-.form__submit-button input{
+.form__submit-button input {
   font-size: 20px;
   background-color: none;
   border-style: none;
